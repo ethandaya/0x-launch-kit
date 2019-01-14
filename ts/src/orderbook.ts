@@ -267,6 +267,11 @@ const serializeOrder = (signedOrder: SignedOrder): SignedOrderModel => {
     return signedOrderModel;
 };
 
+
+
+const t = assetDataUtils.encodeERC20AssetData('0x912d3e07390f6fe60f655e2246a7315b070dcdba');
+utils.log(assetDataUtils.decodeAssetProxyId(t));
+
 const provider = new Web3ProviderEngine();
 provider.addProvider(new RPCSubprovider(RPC_URL));
 provider.start();
